@@ -3,16 +3,16 @@ import type { ButtonProps } from "../types/type";
 
 const getBgVariantStyle =(variant:ButtonProps["bgVariant"])=>{
     switch(variant){
-            case "secondary":
+        case "secondary":
             return "bg-gray-500";
-            case "danger":
+        case "danger":
             return "bg-red-500";
-            case "success":
+        case "success":
             return "bg-green-500";
-            case "outline":
+        case "outline":
             return "bg-transparent border-neutral-300 border-[0.5px]";
-            default:
-                return "bg-[#0286ff]";
+        default:
+            return "bg-[#0286ff]";
 
     }
 };
@@ -33,15 +33,15 @@ const getTextVariantStyle =(variant:ButtonProps["textVariant"])=>{
 };
 
 const CustomButton = ({
-    onPress,
-    title,
-    bgVariant = "primary",
-    textVariant = "default",
-    IconLeft,
-    IconRight,
-    className,
-    ...props
-}: ButtonProps) => (
+                          onPress,
+                          title,
+                          bgVariant = "primary",
+                          textVariant = "default",
+                          IconLeft,
+                          IconRight,
+                          className,
+                          ...props
+                      }: ButtonProps) => (
     <TouchableOpacity
         onPress={onPress}
         className={`w-full p-3 rounded-full flex flex-row justify-center items-center shadow-md shadow-neutral-400/70 ${getBgVariantStyle(bgVariant)} ${className ?? ""}`}
