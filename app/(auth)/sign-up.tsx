@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { Text, View, ScrollView, Image } from "react-native";
 
 import { icons, images } from "@/constants";
-import { InputField } from "@/components";
+import InputField from "@/components/InputField";
 import CustomButton from "@/components/CustomButton";
+import {Link} from "expo-router";
 
 const SignUp = () => {
     const [form, setForm] = useState({
@@ -69,7 +70,7 @@ const SignUp = () => {
 
                     {/* OAuth */}
 
-                    <Link href="/Sign-in" className="text-lg text-center text-general-200 mt-10">
+                    <Link href="/sign-in" className="text-lg text-center text-general-200 mt-10">
                         <Text>Already have an account? </Text>
                         <Text className="text-primary-500">Log In</Text>
                     </Link>
